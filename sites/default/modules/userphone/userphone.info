@@ -1,0 +1,4 @@
+name = userphone
+description = Replaces username with user phone
+package = ukisk
+core = 7.x

@@ -1,0 +1,169 @@
+<?php
+
+/**
+ * Implements hook_menu().
+ */
+function checkform_menu() {
+  $items = array();
+  $items['checkform'] = array(
+    'title' => 'Проверка участия',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('checkform_check_form'),
+    'access arguments' => array('use checkform'),
+    'type' => MENU_CALLBACK,
+  );
+  return $items;
+}
+
+
+/**
+ * Implements hook_permission().
+ */
+function checkform_permission() {
+  return array(
+    'use checkform' => array(
+      'title' => 'Use checkform',
+      'description' => 'Allows users to use checkform',
+    ),
+  );
+}
+
+/**
+ * Checkform builder.
+ */
+function checkform_check_form($form, $form_state) {
+  if (empty($form_state['input']) && !empty($_GET['phone']) && !empty($_GET['hash'])) {
+    if (checkform_check_hash($_GET['phone'], $_GET['hash'])) {
+      if ($results = checkform_search($_GET['phone'])) {
+        if (count($results) > 1) {
+          drupal_set_message('К сожалению или к счастью, данному запросу соответствует более одного результат, уточните запрос, введя больше цифр номера', 'error');
+        }
+        else {
+          return checkform_results($results);
+        }
+      }
+      else {
+        drupal_set_message('К сожалению, данный номер в базе не найден', 'error');
+      }
+    }
+  }
+
+  $form['description'] = array(
+    '#type' => 'markup',
+    '#markup' => '<div class="info">
+    Если вы уже обращались в инициативную группу, то, возможно, вы уже
+    участвуете в иске.<br>Чтобы проверить это, заполните следующую форму.
+    </div>'
+  );
+
+  $form['phone'] = array(
+    '#type' => 'textfield',
+    '#title' => 'Введите номер телефона',
+    '#description' => '<em>Номер в формате 81234568912 или 37523982743.<br>
+      Необязательно вводить номер целиком, можно ввести последовательность любых
+      6ти или более цифр</em>',
+    '#size' => 12,
+    '#maxlength' => 12,
+  );
+
+  $form['actions'] = array(
+    '#type' => 'actions',
+  );
+  $form['actions']['submit'] = array(
+    '#type' => 'submit',
+    '#value' => 'Проверить',
+  );
+
+  return $form;
+}
+
+/**
+ * Implements checkform validate callback.
+ */
+function checkform_check_form_validate($form, &$form_state) {
+  $form_state['values']['phone'] = trim($form_state['values']['phone']);
+}
+
+/**
+ * Implements checkform submit callback.
+ */
+function checkform_check_form_submit($form, $form_state) {
+  $values = $form_state['values'];
+  if ($values['op'] == $values['submit']) {
+    drupal_goto('checkform', array(
+      'query' => array(
+        'phone' => $values['phone'],
+        'hash' => checkform_hash($values['phone']),
+      ),
+    ));
+  }
+}
+
+function checkform_hash($phone) {
+  return md5(drupal_get_hash_salt() . intval(time() / 300) . $phone);
+}
+
+function checkform_check_hash($phone, $hash) {
+  return checkform_hash($phone) == $hash;
+}
+
+function checkform_search($phone) {
+  $query = new EntityFieldQuery();
+  $query
+    ->entityCondition('entity_type', 'user');
+  $query
+    ->propertyCondition('name', '%' . $phone . '%', 'LIKE');
+
+  $results = $query->execute();
+
+  if ($results) {
+    return $results['user'];
+  }
+  return FALSE;
+}
+
+function checkform_results($results) {
+  $keys = array_keys($results);
+  $uid = reset($keys);
+  $account = user_load($uid);
+
+  $city = 'не указано';
+  if (!empty($account->field_city[LANGUAGE_NONE][0]['tid'])) {
+    $term = taxonomy_term_load($account->field_city[LANGUAGE_NONE][0]['tid']);
+    $city = $term->name;
+  }
+
+  if (!empty($account->field_sum[LANGUAGE_NONE][0]['value'])) {
+    $damage = $account->field_sum[LANGUAGE_NONE][0]['value'];
+  }
+  else {
+    $damage = 'не указано';
+  }
+
+  $link = l('авторизоваться', 'user/login');
+
+  $build = array(
+    'phone' => array(
+      '#type' => 'markup',
+      '#markup' => '<div class="item-phone">Телефон: ' . $account->name .  '</div>',
+    ),
+    'fio' => array(
+      '#type' => 'markup',
+      '#markup' => '<div class="item-fio">ФИО: ' . $account->field_fio[LANGUAGE_NONE][0]['safe_value'] .  '</div>',
+    ),
+    'city' => array(
+      '#type' => 'markup',
+      '#markup' => '<div class="item-city">Город: ' . $city .  '</div>',
+    ),
+    'damage' => array(
+      '#type' => 'markup',
+      '#markup' => '<div class="item-damage">Ущерб: ' . $damage .  '</div>',
+    ),
+    'message' => array(
+      '#type' => 'markup',
+      '#markup' => '<p>Если эти данные соответствуют вам, вы можете авторизоваться в системе, пройдя по ссылке ' . $link . '</p>'
+    )
+  );
+
+  return $build;
+}

@@ -1,0 +1,4 @@
+name = checkform
+description = Implements check form
+package = ukisk
+core = 7.x

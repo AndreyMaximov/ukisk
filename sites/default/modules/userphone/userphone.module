@@ -1,0 +1,16 @@
+<?php
+
+function userphone_form_user_register_form_alter(&$form, &$form_state) {
+  $form['account']['name']['#title'] = 'Номер телефона';
+  $form['account']['name']['#description'] = 'Номер телефона в формате 89123456790 или 375123456789 - без плюсов, пробелов, скобок и черточек';
+}
+
+function userphone_form_user_login_alter(&$form, &$form_state) {
+  $form['name']['#title'] = 'Номер телефона';
+  $form['name']['#description'] = 'Номер телефона в формате 89123456790 или 375123456789 - без плюсов, пробелов, скобок и черточек';
+}
+
+function userphone_form_user_pass_alter(&$form, &$form_state) {
+  $form['name']['#title'] = 'Номер телефона или адрес электронной почты';
+  $form['name']['#description'] = 'Номер телефона в формате 89123456790 или 375123456789 - без плюсов, пробелов, скобок и черточек';
+}

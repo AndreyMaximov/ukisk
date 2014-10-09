@@ -1,0 +1,4 @@
+name = confirm
+description = Confirm join
+package = ukisk
+core = 7.x

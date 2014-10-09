@@ -15,10 +15,10 @@ function _smsapi_communicate($request, $cookie=NULL){
   $request['format'] = "json";
   $curl = curl_init();
 
-  curl_setopt($curl, CURLOPT_URL, "http://api.ssms.su/");
-  curl_setopt($curl, CURLOPT_POST, True);
+  curl_setopt($curl, CURLOPT_URL, "http://api2.ssms.su/");
+  curl_setopt($curl, CURLOPT_POST, TRUE);
   curl_setopt($curl, CURLOPT_POSTFIELDS, $request);
-  curl_setopt($curl, CURLOPT_RETURNTRANSFER, True);
+  curl_setopt($curl, CURLOPT_RETURNTRANSFER, TRUE);
 
   if(!is_null($cookie)){
     curl_setopt($curl, CURLOPT_COOKIE, $cookie);
@@ -76,6 +76,9 @@ function smsapi_push_msg_nologin($email, $password, $phone, $text, $params = NUL
     'phone' => $phone,
     'text' => $text,
   );
+
+  dpm($req, 'req');
+
   if (!is_null($params)) {
     $req = array_merge($req, $params);
   }
@@ -108,7 +111,7 @@ function smsapi_push_msg_nologin($email, $password, $phone, $text, $params = NUL
  * * array(>0) - if API returned an error code (included)
  * * NULL is API communication failed
  */
-function smsapi_login($email, $password){
+function smsapi_login($email, $password) {
   $req = array(
     'method' => 'login',
     'format' => 'json',

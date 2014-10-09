@@ -2,13 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="945b3e66-73a2-4335-8b7a-b128ea6f0336" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sites/all/themes/ukisk/scss/base/_ukrest.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sites/default/modules/pcount/plugins/content_types/pcount.inc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/themes/ukisk/scss/base/_drupal.scss" afterPath="$PROJECT_DIR$/sites/all/themes/ukisk/scss/base/_drupal.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/themes/ukisk/scss/base/_ukrest.scss" afterPath="$PROJECT_DIR$/sites/all/themes/ukisk/scss/base/_ukrest.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/default/modules/checkform/checkform.module" afterPath="$PROJECT_DIR$/sites/default/modules/checkform/checkform.module" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/jquery_countdown_timer/js/jquery_countdown_timer_init.js" afterPath="$PROJECT_DIR$/sites/all/modules/jquery_countdown_timer/js/jquery_countdown_timer_init.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/default/modules/pcount/plugins/content_types/pcount.inc" afterPath="$PROJECT_DIR$/sites/default/modules/pcount/plugins/content_types/pcount.inc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/default/modules/pcount/pcount.module" afterPath="$PROJECT_DIR$/sites/default/modules/pcount/pcount.module" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/default/modules/ssms_su/ssms_su.inc" afterPath="$PROJECT_DIR$/sites/default/modules/ssms_su/ssms_su.inc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/default/modules/ssms_su/ssms_su.module" afterPath="$PROJECT_DIR$/sites/default/modules/ssms_su/ssms_su.module" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/themes/ukisk/layouts/ukisk_front/ukisk-front.tpl.php" afterPath="$PROJECT_DIR$/sites/all/themes/ukisk/layouts/ukisk_front/ukisk-front.tpl.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/themes/ukisk/css/ukisk.css" afterPath="$PROJECT_DIR$/sites/all/themes/ukisk/css/ukisk.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/themes/ukisk/ukisk.info" afterPath="$PROJECT_DIR$/sites/all/themes/ukisk/ukisk.info" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/themes/ukisk/scss/ukisk.scss" afterPath="$PROJECT_DIR$/sites/all/themes/ukisk/scss/ukisk.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/default/modules/userphone/userphone.module" afterPath="$PROJECT_DIR$/sites/default/modules/userphone/userphone.module" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="www.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,39 +34,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="userphone.module" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="userphone.module" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sites/default/modules/userphone/userphone.module">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="24" selection-start="1446" selection-end="1446" vertical-scroll-proportion="0.25117004" vertical-offset="367" max-vertical-offset="1088">
+            <state line="41" column="1" selection-start="1635" selection-end="1635" vertical-scroll-proportion="-26.24" vertical-offset="0" max-vertical-offset="1088">
               <folding>
-                <marker date="1412852300000" expanded="true" signature="741:762" placeholder="..." />
+                <marker date="1412853208000" expanded="false" signature="741:762" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ssms_su.info" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sites/default/modules/ssms_su/ssms_su.info">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="8" selection-start="76" selection-end="76" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="160">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ssms_su.module" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="ssms_su.module" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sites/default/modules/ssms_su/ssms_su.module">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="17" selection-start="1256" selection-end="1256" vertical-scroll-proportion="-7.04" vertical-offset="528" max-vertical-offset="1392">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="devel.module" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sites/all/modules/devel/devel.module">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="9" selection-start="1997" selection-end="1997" vertical-scroll-proportion="-4.68" vertical-offset="571" max-vertical-offset="29232">
+            <state line="54" column="20" selection-start="1385" selection-end="1385" vertical-scroll-proportion="1.1498471" vertical-offset="0" max-vertical-offset="1456">
               <folding />
             </state>
           </provider>
@@ -72,21 +57,59 @@
       <file leaf-file-name="ssms_su.inc" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sites/default/modules/ssms_su/ssms_su.inc">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="24" selection-start="811" selection-end="811" vertical-scroll-proportion="-2.936709" vertical-offset="232" max-vertical-offset="2912">
+            <state line="20" column="49" selection-start="655" selection-end="655" vertical-scroll-proportion="-1.28" vertical-offset="144" max-vertical-offset="2256">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_ukrest.scss" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sites/all/themes/ukisk/scss/base/_ukrest.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="42" column="21" selection-start="552" selection-end="552" vertical-scroll-proportion="-20.24" vertical-offset="166" max-vertical-offset="1488">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="terms_of_use.module" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sites/all/modules/terms_of_use/terms_of_use.module">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="23.68" vertical-offset="592" max-vertical-offset="1952">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="confirm.info" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sites/default/modules/confirm/confirm.info">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1" column="26" selection-start="41" selection-end="41" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="144">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="confirm.module" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sites/default/modules/confirm/confirm.module">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="0" selection-start="7" selection-end="7" vertical-scroll-proportion="5.12" vertical-offset="160" max-vertical-offset="2800">
               <folding>
-                <element signature="e#7#342#0" expanded="true" />
-                <element signature="e#1246#1828#0" expanded="true" />
-                <element signature="e#2552#2917#0" expanded="true" />
-                <element signature="e#3374#3912#0" expanded="true" />
+                <marker date="1412858561000" expanded="true" signature="1370:1710" placeholder="..." />
+                <marker date="1412858561000" expanded="false" signature="1386:1402" placeholder="..." />
+                <marker date="1412858561000" expanded="true" signature="1403:1515" placeholder="..." />
+                <marker date="1412858561000" expanded="false" signature="1531:1547" placeholder="..." />
+                <marker date="1412858561000" expanded="true" signature="1548:1699" placeholder="..." />
+                <marker date="1412858561000" expanded="true" signature="1841:2001" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ds.module" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sites/all/modules/ds/ds.module">
+      <file leaf-file-name="jquery_countdown_timer_init.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sites/all/modules/jquery_countdown_timer/js/jquery_countdown_timer_init.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="92" column="23" selection-start="1871" selection-end="1877" vertical-scroll-proportion="-10.24" vertical-offset="848" max-vertical-offset="18288">
+            <state line="11" column="65" selection-start="705" selection-end="705" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="448">
               <folding />
             </state>
           </provider>
@@ -95,7 +118,7 @@
       <file leaf-file-name="pcount.module" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sites/default/modules/pcount/pcount.module">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="24" selection-start="147" selection-end="147" vertical-scroll-proportion="-3.84" vertical-offset="0" max-vertical-offset="448">
+            <state line="17" column="57" selection-start="673" selection-end="673" vertical-scroll-proportion="-10.88" vertical-offset="0" max-vertical-offset="400">
               <folding />
             </state>
           </provider>
@@ -104,31 +127,10 @@
       <file leaf-file-name="pcount.inc" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sites/default/modules/pcount/plugins/content_types/pcount.inc">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="0" selection-start="1070" selection-end="1070" vertical-scroll-proportion="-1.84" vertical-offset="546" max-vertical-offset="1200">
+            <state line="37" column="54" selection-start="1124" selection-end="1135" vertical-scroll-proportion="-10.16" vertical-offset="338" max-vertical-offset="1216">
               <folding>
                 <element signature="e#639#926#0" expanded="true" />
-                <element signature="e#1489#1572#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dsc.inc" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sites/all/modules/ds/plugins/content_types/dsc/dsc.inc">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="81" column="0" selection-start="2195" selection-end="2556" vertical-scroll-proportion="-42.88" vertical-offset="0" max-vertical-offset="1296">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="no_context_content_type.inc" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sites/all/modules/ctools/ctools_plugin_example/plugins/content_types/no_context_content_type.inc">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="3" selection-start="1237" selection-end="1237" vertical-scroll-proportion="3.84" vertical-offset="576" max-vertical-offset="1696">
-              <folding>
-                <element signature="e#1234#1521#0" expanded="true" />
-                <marker date="1392216569000" expanded="true" signature="2050:2383" placeholder="..." />
+                <element signature="e#1474#1557#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -152,22 +154,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/sites/all/themes/ukisk/layouts/ukisk_front/ukisk_front.inc" />
-        <option value="$PROJECT_DIR$/sites/all/themes/ukisk/layouts/ukisk_front/ukisk-front.tpl.php" />
-        <option value="$PROJECT_DIR$/sites/all/themes/ukisk/css/ukisk.css" />
         <option value="$PROJECT_DIR$/sites/all/themes/ukisk/scss/base/_drupal.scss" />
         <option value="$PROJECT_DIR$/sites/all/themes/ukisk/scss/ukisk.scss" />
         <option value="$PROJECT_DIR$/sites/all/themes/ukisk/ukisk.info" />
-        <option value="$PROJECT_DIR$/sites/all/modules/jquery_countdown_timer/js/jquery_countdown_timer_init.js" />
-        <option value="$PROJECT_DIR$/sites/all/themes/ukisk/scss/base/_ukrest.scss" />
         <option value="$PROJECT_DIR$/sites/default/modules/pcount/pcount.info" />
         <option value="$PROJECT_DIR$/sites/default/modules/pcount/plugins/content_types/pcount/pcount.inc" />
-        <option value="$PROJECT_DIR$/sites/default/modules/pcount/pcount.module" />
-        <option value="$PROJECT_DIR$/sites/default/modules/pcount/plugins/content_types/pcount.inc" />
         <option value="$PROJECT_DIR$/sites/default/modules/ssms_su/ssms_su.info" />
-        <option value="$PROJECT_DIR$/sites/default/modules/ssms_su/ssms_su.module" />
-        <option value="$PROJECT_DIR$/sites/default/modules/ssms_su/ssms_su.inc" />
         <option value="$PROJECT_DIR$/sites/default/modules/userphone/userphone.module" />
+        <option value="$PROJECT_DIR$/sites/default/modules/pcount/pcount.module" />
+        <option value="$PROJECT_DIR$/sites/default/modules/checkform/checkform.module" />
+        <option value="$PROJECT_DIR$/sites/all/themes/ukisk/layouts/ukisk_front/ukisk-front.tpl.php" />
+        <option value="$PROJECT_DIR$/sites/all/modules/jquery_countdown_timer/js/jquery_countdown_timer_init.js" />
+        <option value="$PROJECT_DIR$/sites/default/modules/pcount/plugins/content_types/pcount.inc" />
+        <option value="$PROJECT_DIR$/sites/all/themes/ukisk/scss/base/_ukrest.scss" />
+        <option value="$PROJECT_DIR$/sites/default/modules/confirm/confirm.info" />
+        <option value="$PROJECT_DIR$/sites/default/modules/ssms_su/ssms_su.inc" />
+        <option value="$PROJECT_DIR$/sites/default/modules/ssms_su/ssms_su.module" />
       </list>
     </option>
   </component>
@@ -386,10 +388,6 @@
               <option name="myItemId" value="modules" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pcount" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -413,15 +411,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="pcount" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plugins" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="content_types" />
+              <option name="myItemId" value="confirm" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -468,6 +458,100 @@
               <option name="myItemId" value="all" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sites" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="all" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ukisk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sites" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="all" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ukisk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="isk-ukrest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sites" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="all" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ukisk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -488,6 +572,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sites" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="all" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="terms_of_use" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -547,96 +657,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sites" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="all" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ds" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sites" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="all" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ds" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plugins" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="content_types" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dsc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sites" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="all" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="devel" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -663,6 +683,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/sites/default/modules" />
       <recent name="$PROJECT_DIR$/sites/default/modules/pcount/plugins/content_types" />
       <recent name="$PROJECT_DIR$/sites/default/modules/pcount" />
       <recent name="$PROJECT_DIR$/sites/all/themes/ukisk/layouts/ukisk_front" />
@@ -776,131 +797,127 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/ctools/plugins/content_types/node/node.inc">
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/ukisk/scss/ukisk.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="253" selection-end="687" vertical-scroll-proportion="-3.2" vertical-offset="0" max-vertical-offset="3792">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="30.08" vertical-offset="752" max-vertical-offset="1408">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sites/default/modules/checkform/checkform.module">
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/ukisk/scss/layout/_header.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="108" column="0" selection-start="2795" selection-end="3094" vertical-scroll-proportion="-8.96" vertical-offset="1376" max-vertical-offset="2656">
-          <folding>
-            <marker date="1412796484000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1412796484000" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/database/query.inc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="165" column="10" selection-start="4831" selection-end="4831" vertical-scroll-proportion="75.6" vertical-offset="2562" max-vertical-offset="17424">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="439">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/ctools/ctools_plugin_example/plugins/content_types/simplecontext_content_type.inc">
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/ukisk/scss/layout/_footer.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="0" selection-start="477" selection-end="1424" vertical-scroll-proportion="-4.48" vertical-offset="0" max-vertical-offset="1616">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="439">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/ctools/ctools_plugin_example/ctools_plugin_example.pages_default.inc">
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/ukisk/scss/layout/_aside.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="6976">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="439">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/ctools/ctools_plugin_example/ctools_plugin_example.module">
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/ukisk/scss/layout/_main.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="33" selection-start="1348" selection-end="1348" vertical-scroll-proportion="6.36" vertical-offset="351" max-vertical-offset="992">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="439">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/ctools/ctools_plugin_example/plugins/content_types/no_context_content_type.inc">
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/zurb_foundation/css/foundation.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="3" selection-start="1237" selection-end="1237" vertical-scroll-proportion="3.84" vertical-offset="576" max-vertical-offset="1696">
-          <folding>
-            <element signature="e#1234#1521#0" expanded="true" />
-            <marker date="1392216569000" expanded="true" signature="2050:2383" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/ds/plugins/content_types/dsc/dsc.inc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="81" column="0" selection-start="2195" selection-end="2556" vertical-scroll-proportion="-42.88" vertical-offset="0" max-vertical-offset="1296">
+        <state line="315" column="0" selection-start="6773" selection-end="6818" vertical-scroll-proportion="0.0" vertical-offset="4784" max-vertical-offset="78144">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/ds/ds.module">
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/jquery_countdown_timer/js/jquery_countdown_timer_init.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="92" column="23" selection-start="1871" selection-end="1877" vertical-scroll-proportion="-10.24" vertical-offset="848" max-vertical-offset="18288">
+        <state line="11" column="65" selection-start="705" selection-end="705" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="448">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sites/default/modules/pcount/pcount.module">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="24" selection-start="147" selection-end="147" vertical-scroll-proportion="-3.84" vertical-offset="0" max-vertical-offset="448">
+        <state line="17" column="57" selection-start="673" selection-end="673" vertical-scroll-proportion="-10.88" vertical-offset="0" max-vertical-offset="400">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sites/default/modules/pcount/plugins/content_types/pcount.inc">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="0" selection-start="1070" selection-end="1070" vertical-scroll-proportion="-1.84" vertical-offset="546" max-vertical-offset="1200">
+        <state line="37" column="54" selection-start="1124" selection-end="1135" vertical-scroll-proportion="-10.16" vertical-offset="338" max-vertical-offset="1216">
           <folding>
             <element signature="e#639#926#0" expanded="true" />
-            <element signature="e#1489#1572#0" expanded="true" />
+            <element signature="e#1474#1557#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sites/default/modules/ssms_su/ssms_su.info">
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/ukisk/scss/base/_ukrest.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="8" selection-start="76" selection-end="76" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="160">
+        <state line="42" column="21" selection-start="552" selection-end="552" vertical-scroll-proportion="-20.24" vertical-offset="166" max-vertical-offset="1488">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/devel/devel.module">
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/terms_of_use/terms_of_use.module">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="9" selection-start="1997" selection-end="1997" vertical-scroll-proportion="-4.68" vertical-offset="571" max-vertical-offset="29232">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="23.68" vertical-offset="592" max-vertical-offset="1952">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sites/default/modules/ssms_su/ssms_su.module">
+    <entry file="file://$PROJECT_DIR$/sites/default/modules/confirm/confirm.info">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="17" selection-start="1256" selection-end="1256" vertical-scroll-proportion="-7.04" vertical-offset="528" max-vertical-offset="1392">
+        <state line="1" column="26" selection-start="41" selection-end="41" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="144">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sites/default/modules/ssms_su/ssms_su.inc">
+    <entry file="file://$PROJECT_DIR$/sites/default/modules/confirm/confirm.module">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="24" selection-start="811" selection-end="811" vertical-scroll-proportion="-2.936709" vertical-offset="232" max-vertical-offset="2912">
+        <state line="2" column="0" selection-start="7" selection-end="7" vertical-scroll-proportion="5.12" vertical-offset="160" max-vertical-offset="2800">
           <folding>
-            <element signature="e#7#342#0" expanded="true" />
-            <element signature="e#1246#1828#0" expanded="true" />
-            <element signature="e#2552#2917#0" expanded="true" />
-            <element signature="e#3374#3912#0" expanded="true" />
+            <marker date="1412858561000" expanded="true" signature="1370:1710" placeholder="..." />
+            <marker date="1412858561000" expanded="false" signature="1386:1402" placeholder="..." />
+            <marker date="1412858561000" expanded="true" signature="1403:1515" placeholder="..." />
+            <marker date="1412858561000" expanded="false" signature="1531:1547" placeholder="..." />
+            <marker date="1412858561000" expanded="true" signature="1548:1699" placeholder="..." />
+            <marker date="1412858561000" expanded="true" signature="1841:2001" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sites/default/modules/userphone/userphone.module">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="24" selection-start="1446" selection-end="1446" vertical-scroll-proportion="0.25117004" vertical-offset="367" max-vertical-offset="1088">
+        <state line="41" column="1" selection-start="1635" selection-end="1635" vertical-scroll-proportion="-26.24" vertical-offset="0" max-vertical-offset="1088">
           <folding>
-            <marker date="1412852300000" expanded="true" signature="741:762" placeholder="..." />
+            <marker date="1412853208000" expanded="false" signature="741:762" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/default/modules/ssms_su/ssms_su.inc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="49" selection-start="655" selection-end="655" vertical-scroll-proportion="-1.28" vertical-offset="144" max-vertical-offset="2256">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/default/modules/ssms_su/ssms_su.module">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="20" selection-start="1385" selection-end="1385" vertical-scroll-proportion="1.1498471" vertical-offset="0" max-vertical-offset="1456">
+          <folding />
         </state>
       </provider>
     </entry>

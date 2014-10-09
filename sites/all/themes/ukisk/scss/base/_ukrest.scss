@@ -14,6 +14,7 @@
 
 .countdown-pane {
   .pane-title {
+    text-align: center;
     font-size: 1rem;
   }
 
@@ -29,5 +30,58 @@
 .title-area {
   .name {
     display: none;
+  }
+}
+
+@media only screen and (max-width:64.063em) {
+  .check-buttons p {
+    text-align:center;
+  }
+}
+
+.join-button p {
+  text-align: center;
+}
+
+.pcount {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1em;
+  background-image: url("../images/isk-ukrest/32line.png");
+  background-position: center top;
+  background-repeat: repeat-x;
+
+  .pcount-text {
+    background-color: #FFF;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+}
+
+.user-profile {
+  .field {
+    line-height: 1.6;
+
+    p {
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  .field-name-field-city {
+    .field-label {
+      font-size: 100%;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+    }
+    .links {
+      list-style: none;
+      font-size: 100%;
+      margin: 0;
+      margin-bottom: 2em;
+      padding: 0;
+    }
   }
 }

@@ -7,6 +7,9 @@
 	timestamp : ts,
 	callback : function(days, hours, minutes, seconds){
           var dateStrings = new Array();
+          Drupal.formatPlural(hours, '1 hour', '@count[2] hours');
+          Drupal.formatPlural(hours, '1 hour', '@count[2] minutes');
+          Drupal.formatPlural(hours, '1 hour', '@count[2] days');
           dateStrings['@days'] = Drupal.formatPlural(days, '1 day', '@count days');
           dateStrings['@hours'] = Drupal.formatPlural(hours, '1 hour', '@count hours');
           dateStrings['@minutes'] = Drupal.formatPlural(minutes, '1 minute', '@count minutes');

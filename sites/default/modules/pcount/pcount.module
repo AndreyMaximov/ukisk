@@ -11,13 +11,10 @@ function pcount_ctools_plugin_directory($module, $plugin_type) {
 
 function pcount_query_exceptroles_alter(QueryAlterableInterface $query) {
   $rolenames = $query->getMetaData('rolenames');
-
   $role_subquery = db_select("role", "role");
   $role_subquery->condition('role.name', $rolenames);
   $role_subquery->join('users_roles', "users_to_include", "role.rid = users_to_include.rid");
   $role_subquery->fields('users_to_include', array('uid' => 'uid'));
   $role_subquery->where('users_to_include.uid = users.uid');
   $query->notExists($role_subquery);
-
-  dpm($query->__toString());
 }

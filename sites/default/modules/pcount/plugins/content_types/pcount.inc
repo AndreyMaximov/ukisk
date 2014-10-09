@@ -35,7 +35,7 @@ function pcount_content_type_render($subtype, $conf, $args, $context) {
   $block = new stdClass();
 
   $block->title = 'Количество участников';
-  $block->content = '<div style="font-size: 2rem;text-align: center;margin-bottom: 1em;">Нас уже ' . t('@count participants', array('@count' => _pcount_count())) . '</div>';
+  $block->content = '<div class="pcount"><span class="pcount-text">Нас уже ' . t('@count participants', array('@count' => _pcount_count())) . '</span></div>';
 
   return $block;
 }
@@ -61,6 +61,7 @@ function _pcount_count() {
   $query->entityCondition('entity_type', 'user');
   $query->addTag('exceptroles');
   $query->addMetaData('rolenames', array('administrator', 'Модератор'));
+  $query->propertyCondition('uid', 1, '>');
   $results = $query->execute();
 
   if ($results) {

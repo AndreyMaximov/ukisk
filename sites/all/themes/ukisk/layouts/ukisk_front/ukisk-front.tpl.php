@@ -41,7 +41,7 @@
 </div>
 
 <div class="row">
-  <div class="large-4 columns">
+  <div class="large-4 columns check-buttons">
     <?php print $content['below_left']; ?>
   </div>
 

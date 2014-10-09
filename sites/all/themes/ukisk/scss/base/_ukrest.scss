@@ -117,3 +117,9 @@ html input[type=text] {
 .top-bar.expanded .toggle-topbar.menu-icon a span:hover {
   box-shadow: none;
 }
+
+#admin-menu {
+  ul, li {
+    font-size: 100%;
+  }
+}

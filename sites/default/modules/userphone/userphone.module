@@ -8,9 +8,56 @@ function userphone_form_user_register_form_alter(&$form, &$form_state) {
 function userphone_form_user_login_alter(&$form, &$form_state) {
   $form['name']['#title'] = 'Номер телефона';
   $form['name']['#description'] = 'Номер телефона в формате 89123456790 или 375123456789 - без плюсов, пробелов, скобок и черточек';
+
+  $form['help'] = array(
+    '#type' => 'markup',
+    '#markup' => 'Если вы не имеете пароля, вы можете получить его на странице <a href="/user/password">восстановления пароля</a>',
+    '#prefix' => '<div style="padding-bottom: 1rem;">',
+    '#suffix' => '</div>',
+  );
 }
 
 function userphone_form_user_pass_alter(&$form, &$form_state) {
   $form['name']['#title'] = 'Номер телефона или адрес электронной почты';
   $form['name']['#description'] = 'Номер телефона в формате 89123456790 или 375123456789 - без плюсов, пробелов, скобок и черточек';
+
+  $form['#submit'] = array(
+    'userphone_form_user_pass_submit',
+  );
+}
+
+function userphone_form_user_pass_submit($form, $form_state) {
+  if (strpos($form_state['values']['name'], '@') === FALSE) {
+    $password = userphone_generate_password();
+    $account = user_load_by_name($form_state['values']['name']);
+    $account->password = $password;
+    user_save($account);
+
+    ssms_su_send('89261376414', $password, array());
+    drupal_set_message('Пароль ' . $password . ' выслан на ваш телефон');
+  }
+  else {
+    user_pass_submit($form, $form_state);
+  }
+}
+
+function userphone_form_user_profile_form_alter(&$form, &$form_state) {
+  $form['account']['name']['#title'] = 'Номер телефона';
+  $form['account']['name']['#description'] = 'Номер телефона в формате 89123456790 или 375123456789 - без плюсов, пробелов, скобок и черточек';
+}
+
+function userphone_ds_fields_info_alter(&$fields, $entity_type) {
+  if ($entity_type == 'user') {
+    if (isset($fields['name'])) {
+      $fields['name']['title'] = 'Номер телефона';
+    }
+  }
+}
+
+function userphone_generate_password() {
+  $password = '';
+  for ($i = 0; $i < 6; $i++) {
+    $password .= (string) rand(0, 9);
+  }
+  return $password;
 }

@@ -1,0 +1,4 @@
+name = pcount
+description = Participants count pane
+package = ukisk
+core = 7.x

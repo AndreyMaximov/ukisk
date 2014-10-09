@@ -1,0 +1,90 @@
+<?php
+// $Id$
+ 
+/**
+ * @file
+ * Drupal Module: ssms_su
+ */
+
+require_once(drupal_get_path('module', 'ssms_su') .'/ssms_su.inc');
+
+function ssms_su_menu() {
+  $items['admin/config/system/sms'] = array(
+    'title' => 'SMS Gateway settings',
+    'description' => 'SMS Gateway settings',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('ssms_su_admin_form'),
+    'access arguments' => array('administer site configuration'),
+  );
+
+  return $items;
+}
+
+/**
+ * Callback for sms framework configure form.
+ */
+function ssms_su_admin_form() {
+  $form['ssms_su_email'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Email'),
+    '#description' => t('The username of your ssms_su account.'),
+    '#size' => 40,
+    '#maxlength' => 255,
+    '#default_value' => variable_get('ssms_su_email', ''),
+  );
+  $form['ssms_su_password'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Password'),
+    '#description' => t('The current password on your ssms_su account.'),
+    '#size' => 30,
+    '#maxlength' => 64,
+    '#default_value' => variable_get('ssms_su_password', ''),
+  );
+
+  return system_settings_form($form);
+}
+
+
+/**
+ * Callback for sending messages.
+ */
+function ssms_su_send($number, $message, $options) {
+  $result = smsapi_push_msg_nologin(variable_get('ssms_su_email'),
+    variable_get('ssms_su_password'), $number, $message);
+  
+  // Check for communication errors
+  if (!$result) {
+    return array(
+      'status' => FALSE,
+      'message' => t('An error occured during the communication'),
+    );
+  }
+  
+  // Check for ssms_su errors
+  if ($result[0] == 0) {
+    return array('status' => TRUE);
+  }
+  else {
+    $error_codes = ssms_su_error_codes();
+    return array(
+      'status' => FALSE,
+      'message' => t('An error ssms_su: @error', array('@error' => $error_codes[$result[0]])),
+    );
+  }
+}
+
+/**
+ * Helper code errors from ssms_su api manual.
+ */
+function ssms_su_error_codes() {
+  return array(
+    15 => "Действие запрещено",
+    19 => "Произошла ошибка",
+    29 => "Сотовый оператор не подключен",
+    35 => "Кодировка текста не соответствует заявленной",
+    36 => "Недостаточно средств, пополните баланс",
+    37 => "Сообщение содержит ненормативную лексику",
+    38 => "Сообщение содержит указание на платный номер");
+}
+
+

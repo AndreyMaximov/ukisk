@@ -1,0 +1,33 @@
+.overall-header {
+  font-size: 32px;
+  line-height: 32px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.countdownHolder {
+  .countDiv2,
+  .countSeconds {
+    display: none;
+  }
+}
+
+.countdown-pane {
+  .pane-title {
+    font-size: 1rem;
+  }
+
+  .countdownHolder {
+    width: auto;
+  }
+
+  #jquery-countdown-timer-note {
+    width: auto;
+  }
+}
+
+.title-area {
+  .name {
+    display: none;
+  }
+}

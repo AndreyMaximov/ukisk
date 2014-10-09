@@ -1,0 +1,4 @@
+name = "SSMS_SU"
+description = "SSMS_SU gateway for SMS Framework."
+core = 7.x
+package = SMS Framework

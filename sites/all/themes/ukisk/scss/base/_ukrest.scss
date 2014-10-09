@@ -90,3 +90,20 @@
   @extend .button;
   @extend .tiny;
 }
+
+
+html.js {
+  input.form-autocomplete {
+    background-image: none;
+  }
+
+  input.throbbing {
+    background-image: url("../images/isk-ukrest/ajax-loader.gif");
+    background-position: 98% 50%;
+    background-repeat: no-repeat;
+  }
+}
+
+html input[type=text] {
+  width: auto;
+}

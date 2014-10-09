@@ -545,7 +545,7 @@ function zurb_foundation_preprocess_page(&$variables) {
 
     if ($back_text = check_plain(theme_get_setting('zurb_foundation_top_bar_back_text'))) {
       if ($back_text !== 'Back') {
-        $top_bar_options[] = "back_text:'{$back_text}'";
+        $top_bar_options[] = "back_text:{$back_text}";
       }
     }
 

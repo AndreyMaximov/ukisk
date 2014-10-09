@@ -72,6 +72,9 @@ function userphone_preprocess_user_profile(&$vars) {
 
   $flags = flag_get_entity_flags('user', $vars['elements']['#account']->uid);
 
+  // Turn phone back cause of real name and bad design
+  $vars['user_profile']['name'][0]['#markup'] = '<p>' . $vars['elements']['#account']->name . '</p>';
+
   if (!isset($flags[0]['join_approval'])) {
     $vars['user_profile']['join_approval_check'] = array(
       '#markup' => '<span class="alert radius label" style="margin-bottom: 1em;">Ваше участие не подтверждено.</span>',

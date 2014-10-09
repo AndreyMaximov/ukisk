@@ -107,3 +107,13 @@ html.js {
 html input[type=text] {
   width: auto;
 }
+
+.top-bar .toggle-topbar.menu-icon a span::after,
+.top-bar.expanded .toggle-topbar.menu-icon a span {
+  box-shadow: none;
+}
+
+.top-bar .toggle-topbar.menu-icon a span:hover:after,
+.top-bar.expanded .toggle-topbar.menu-icon a span:hover {
+  box-shadow: none;
+}

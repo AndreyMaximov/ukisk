@@ -11,8 +11,8 @@
  * array, $err_code is an error numeric code 
  */
 
-function _smsapi_communicate($request, $cookie=NULL){
-  $request['format'] = "json";
+function _smsapi_communicate($request, $cookie = NULL){
+  $request['format'] = 'json';
   $curl = curl_init();
 
   curl_setopt($curl, CURLOPT_URL, "http://api2.ssms.su/");
@@ -20,14 +20,12 @@ function _smsapi_communicate($request, $cookie=NULL){
   curl_setopt($curl, CURLOPT_POSTFIELDS, $request);
   curl_setopt($curl, CURLOPT_RETURNTRANSFER, TRUE);
 
-  if(!is_null($cookie)){
+  if (!is_null($cookie)){
     curl_setopt($curl, CURLOPT_COOKIE, $cookie);
   }
 
   $data = curl_exec($curl);
   curl_close($curl);
-
-  dpm(json_decode($data), 'sms data');
 
   if ($data === FALSE) {
     return NULL;
@@ -75,9 +73,8 @@ function smsapi_push_msg_nologin($email, $password, $phone, $text, $params = NUL
     'password' => $password,
     'phone' => $phone,
     'text' => $text,
+    'api_v' => '1.1',
   );
-
-  dpm($req, 'req');
 
   if (!is_null($params)) {
     $req = array_merge($req, $params);

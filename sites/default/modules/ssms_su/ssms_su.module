@@ -52,8 +52,6 @@ function ssms_su_send($number, $message, $options) {
   $result = smsapi_push_msg_nologin(variable_get('ssms_su_email'),
     variable_get('ssms_su_password'), $number, $message);
 
-  dpm($result, 'result');
-
   // Check for communication errors
   if (!$result) {
     return array(

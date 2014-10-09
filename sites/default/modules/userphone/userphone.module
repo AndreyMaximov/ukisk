@@ -30,11 +30,16 @@ function userphone_form_user_pass_submit($form, $form_state) {
   if (strpos($form_state['values']['name'], '@') === FALSE) {
     $password = userphone_generate_password();
     $account = user_load_by_name($form_state['values']['name']);
-    $account->password = $password;
-    user_save($account);
+    user_save($account, array('pass' => $password));
+    ssms_su_send($form_state['values']['name'], $password, array());
+//    ssms_su_send('89261376414', $password, array());
 
-    ssms_su_send('89261376414', $password, array());
-    drupal_set_message('Пароль ' . $password . ' выслан на ваш телефон');
+    drupal_set_message('Пароль выслан на ваш телефон');
+
+    watchdog('userphone', '%phone %pass', array(
+      '%phone' => $form_state['values']['name'],
+      '%pass' => $password,
+    ));
   }
   else {
     user_pass_submit($form, $form_state);
@@ -60,4 +65,17 @@ function userphone_generate_password() {
     $password .= (string) rand(0, 9);
   }
   return $password;
+}
+
+function userphone_preprocess_user_profile(&$vars) {
+  $account = $GLOBALS['user'];
+
+  $flags = flag_get_entity_flags('user', $vars['elements']['#account']->uid);
+
+  if (!isset($flags[0]['join_approval'])) {
+    $vars['user_profile']['join_approval_check'] = array(
+      '#markup' => '<span class="alert radius label" style="margin-bottom: 1em;">Ваше участие не подтверждено.</span>',
+      '#access' => TRUE,
+    );
+  }
 }

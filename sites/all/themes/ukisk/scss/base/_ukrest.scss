@@ -85,3 +85,8 @@
     }
   }
 }
+
+.flag-outer .flag {
+  @extend .button;
+  @extend .tiny;
+}

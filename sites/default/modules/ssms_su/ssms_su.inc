@@ -66,13 +66,14 @@ function _smsapi_communicate($request, $cookie = NULL){
  * * array(0, n_raw_sms, credits) - number of SMS parts in message and 
  * price for a single part
  */
-function smsapi_push_msg_nologin($email, $password, $phone, $text, $params = NULL){
+function smsapi_push_msg_nologin($email, $password, $phone, $text, $sender_name, $params = NULL){
   $req = array(
     'method' => 'push_msg',
     'email' => $email,
     'password' => $password,
     'phone' => $phone,
     'text' => $text,
+    'sender_name' => $sender_name,
     'api_v' => '1.1',
   );
 

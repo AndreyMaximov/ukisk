@@ -40,6 +40,14 @@ function ssms_su_admin_form() {
     '#maxlength' => 64,
     '#default_value' => variable_get('ssms_su_password', ''),
   );
+  $form['ssms_su_sendername'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Sender name'),
+    '#description' => t('The name of SMS author.'),
+    '#size' => 40,
+    '#maxlength' => 10,
+    '#default_value' => variable_get('ssms_su_sendername', ''),
+  );
 
   return system_settings_form($form);
 }
@@ -50,7 +58,7 @@ function ssms_su_admin_form() {
  */
 function ssms_su_send($number, $message, $options) {
   $result = smsapi_push_msg_nologin(variable_get('ssms_su_email'),
-    variable_get('ssms_su_password'), $number, $message);
+    variable_get('ssms_su_password'), $number, $message, variable_get('ssms_su_sendername'));
 
   // Check for communication errors
   if (!$result) {

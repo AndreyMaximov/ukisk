@@ -46,3 +46,10 @@ function ukisk_preprocess_page(&$variables) {
  */
 //function ukisk_preprocess_node(&$variables) {
 //}
+
+/**
+ * Implements of hook_form_FORM_ID_alter()
+ */
+function ukisk_form_contact_site_form_alter(&$form, &$form_state) {
+  drupal_set_title('Задать вопрос');
+}

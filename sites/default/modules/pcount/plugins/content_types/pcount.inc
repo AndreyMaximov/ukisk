@@ -35,7 +35,10 @@ function pcount_content_type_render($subtype, $conf, $args, $context) {
   $block = new stdClass();
 
   $block->title = 'Количество участников';
-  $block->content = '<div class="pcount"><span class="pcount-text">Нас уже ' . t('@count participants', array('@count' => _pcount_count())) . '</span></div>';
+  $block->content = '
+    <div class="pcount">
+      <span class="pcount-text">Нас уже ' . format_plural(_pcount_count(), '@count participant', '@count participants') . '</span>
+    </div>';
 
   return $block;
 }

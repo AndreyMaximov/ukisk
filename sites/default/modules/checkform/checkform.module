@@ -150,6 +150,15 @@ function checkform_results($results) {
   }
 
   $link = l('авторизоваться', 'user/login');
+  $messages[] = '<p>Если эти данные соответствуют вам, вы можете авторизоваться в системе, пройдя по ссылке ' . $link . '.</p>';
+
+  $no_email = strpos($account->mail, '_test') !== FALSE;
+  if ($no_email) {
+    $messages[] = '<p>К сожалению, у нас нет адреса вашей электронной почты,
+    поэтому для восстановления пароля используйте ваш телефон.
+    Укажите номер на странице <a href="/user/password">восстановления пароля</a>,
+    пароль придёт в СМС.</p>';
+  }
 
   $build = array(
     'phone' => array(
@@ -170,7 +179,7 @@ function checkform_results($results) {
     ),
     'message' => array(
       '#type' => 'markup',
-      '#markup' => '<p>Если эти данные соответствуют вам, вы можете авторизоваться в системе, пройдя по ссылке ' . $link . '.</p>'
+      '#markup' => implode('', $messages),
     )
   );
 

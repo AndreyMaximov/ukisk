@@ -32,7 +32,6 @@ function userphone_form_user_pass_submit($form, $form_state) {
     $account = user_load_by_name($form_state['values']['name']);
     user_save($account, array('pass' => $password));
     ssms_su_send($form_state['values']['name'], $password, array());
-//    ssms_su_send('89261376414', $password, array());
 
     drupal_set_message('Пароль выслан на ваш телефон');
 

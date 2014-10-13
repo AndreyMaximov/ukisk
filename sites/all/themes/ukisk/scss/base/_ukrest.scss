@@ -123,3 +123,28 @@ html input[type=text] {
     font-size: 100%;
   }
 }
+
+
+.list-item-icon {
+  list-style: none;
+  padding-left: 0px;
+  line-height: 24px;
+  margin-bottom: 8px;
+
+  .list-item-unchecked {
+    background-image: url(../images/foundation/misc/wrong2.png);
+    background-position: left center;
+    background-repeat: no-repeat;
+    display: block;
+    float: left;
+    width: 16px;
+    height: 24px;
+    position: relative;;
+    margin-right: 8px;
+  }
+
+  .list-item-checked {
+    @extend .list-item-unchecked;
+    background-image: url(../images/foundation/misc/check6.png);
+  }
+}

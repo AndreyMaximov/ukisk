@@ -1,0 +1,4 @@
+name = userprofile
+description = Formatter for profile list fields
+package = ukisk
+core = 7.x

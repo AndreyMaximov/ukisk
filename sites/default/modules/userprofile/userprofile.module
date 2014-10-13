@@ -1,0 +1,57 @@
+<?php
+
+/**
+ * Implements hook_field_formatter_info().
+ */
+function userprofile_field_formatter_info() {
+  return array(
+    'list_show_all' => array(
+      'label' => t('List with unchecked'),
+      'field types' => array('list_integer', 'list_float', 'list_text', 'list_boolean'),
+    ),
+  );
+}
+
+/**
+ * Implements hook_field_formatter_view().
+ */
+function userprofile_field_formatter_view($entity_type, $entity, $field, $instance, $langcode, $items, $display) {
+  $element = array();
+
+  $outputs = '';
+
+  switch ($display['type']) {
+    case 'list_show_all':
+      $allowed_values = list_allowed_values($field, $instance, $entity_type, $entity);
+      foreach ($allowed_values as $key => $allowed_value) {
+        $checked = FALSE;
+        foreach ($items as $item) {
+          if ($item['value'] == $key) {
+            $checked = TRUE;
+          }
+        }
+        $output = '<li class="list-item-icon">'
+          . '<span class="list-item-' . ($checked ? 'checked' : 'unchecked') . '"
+            title="' . ($checked ? 'Документ получен' : 'Документ не получен') . '"></span>'
+          . field_filter_xss($allowed_values[$key])
+          . '</li>';
+        $outputs .= $output;
+      }
+      $element[0] = array('#markup' => $outputs);
+      break;
+  }
+
+  return $element;
+}
+
+function userprofile_field_attach_view_alter(&$result, $context) {
+  if ($context['entity_type'] == 'profile2' && isset($context['display']['type']) && $context['display']['type'] == 'list_show_all' ) {
+    $fieldnames = array_keys($result);
+    $fieldname = reset($fieldnames);
+    if (isset($result[$fieldname])) {
+      if ($result[$fieldname]['#view_mode'] == '_custom_display' && empty($result[$fieldname]['#items'])) {
+        $result[$fieldname]['#items'][0] = TRUE;
+      }
+    }
+  }
+}

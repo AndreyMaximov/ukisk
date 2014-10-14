@@ -44,13 +44,57 @@ function userprofile_field_formatter_view($entity_type, $entity, $field, $instan
   return $element;
 }
 
-function userprofile_field_attach_view_alter(&$result, $context) {
-  if ($context['entity_type'] == 'profile2' && isset($context['display']['type']) && $context['display']['type'] == 'list_show_all' ) {
-    $fieldnames = array_keys($result);
+function userprofile_field_attach_view_alter(&$output, $context) {
+  if (isset($context['display']['type']) && $context['display']['type'] == 'list_show_all' ) {
+    $fieldnames = array_keys($output);
     $fieldname = reset($fieldnames);
     if (isset($result[$fieldname])) {
-      if ($result[$fieldname]['#view_mode'] == '_custom_display' && empty($result[$fieldname]['#items'])) {
+      if (empty($result[$fieldname]['#items'])) {
         $result[$fieldname]['#items'][0] = TRUE;
+      }
+    }
+  }
+  elseif ($context['entity_type'] == 'profile2' && $context['entity']->type == 'scans') {
+    $entity_type = $context['entity_type'];
+    $entity = $context['entity'];
+    $view_mode = $context['view_mode'];
+
+    list($id, $vid, $bundle) = entity_extract_ids($entity_type, $entity);
+    foreach (field_info_instances($entity_type, $bundle) as $field_name => $instance) {
+      if (!empty($output[$field_name])) {
+        continue;
+      }
+      $display = field_get_display($instance, $view_mode, $entity);
+      $field = field_info_field($field_name);
+      if ($field['type'] == 'image') {
+        $markup = 'Скан-копии еще не загружены!';
+        if (empty($context['language'])) {
+          $language = field_language($entity_type, $entity, $field_name);
+        }
+        else {
+          $language = $context['language'];
+        }
+
+        $output[$field_name] = array(
+          '#theme' => 'field',
+          '#title' => $instance['label'],
+          '#label_display' => 'hidden',
+          '#weight' => $display['weight'],
+          '#field_type' => $field['type'],
+          '#field_name' => $field_name,
+          '#bundle' => $bundle,
+          '#object' => $entity,
+          '#entity_type' => $entity_type,
+          '#view_mode' => $view_mode,
+          '#language' => $language,
+          '#formatter' => $display['type'],
+          '#items' => array(
+            0 => array('value' => $markup),
+          ),
+          0 => array(
+            '#markup' => $markup,
+          ),
+        );
       }
     }
   }

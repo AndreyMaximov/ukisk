@@ -48,9 +48,9 @@ function userprofile_field_attach_view_alter(&$output, $context) {
   if (isset($context['display']['type']) && $context['display']['type'] == 'list_show_all' ) {
     $fieldnames = array_keys($output);
     $fieldname = reset($fieldnames);
-    if (isset($result[$fieldname])) {
-      if (empty($result[$fieldname]['#items'])) {
-        $result[$fieldname]['#items'][0] = TRUE;
+    if (isset($output[$fieldname])) {
+      if (empty($output[$fieldname]['#items'])) {
+        $output[$fieldname]['#items'][0] = TRUE;
       }
     }
   }
